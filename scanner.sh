@@ -2,7 +2,7 @@
 echo "Enter the starting IP address (later the program uses CIDR notation for scanning) "
 read FirstIP
 
-# Define important ports and their descriptions
+# ports and descriptions
 declare -A PORTS=(
     [21]="FTP: File Transfer Protocol"
     [22]="SSH: Secure Shell"
@@ -42,7 +42,7 @@ declare -A PORTS=(
     [11212]="Memcached: Distributed Cache"
     [27018]="MongoDB: NoSQL Database"
 )
-# Display concise information for all ports
+
 echo "Important Ports and Their Information:"
 echo "---------------------------------------"
 for PORT in $(printf "%s\n" "${!PORTS[@]}" | sort -n); do
