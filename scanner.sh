@@ -53,6 +53,6 @@ echo "End of port information."
 
 echo "Enter the port number you want to scan for : "
 read port
-echo "Scanning for IP address: " $FirstIP"/25"
+echo "Scanning for IP address: " $FirstIP"/24"
 
-echo | nmap -sT $FirstIP/"25" -p $port
+echo | nmap -sT $FirstIP/"24" -p $port
